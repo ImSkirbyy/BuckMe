@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#5b1fc4">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="BuckMe">
+<title>BuckMe</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- Ladebildschirm -->
+  <div id="splash">
+    <div class="splash-inner">
+      <div class="splash-logo" id="splashLogo"></div>
+      <div class="splash-word">buckme</div>
+    </div>
+  </div>
+
+  <header class="top">
+    <div class="top-logo" id="topLogo" aria-label="BuckMe"></div>
+    <div class="top-right">
+      <button class="icon-btn" id="settingsBtn" aria-label="Einstellungen">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M19.4 13a7.6 7.6 0 0 0 0-2l2.1-1.6-2-3.5-2.5 1a7.5 7.5 0 0 0-1.7-1L15 3.2h-4l-.4 2.7a7.5 7.5 0 0 0-1.7 1l-2.5-1-2 3.5L6.6 11a7.6 7.6 0 0 0 0 2l-2.1 1.6 2 3.5 2.5-1a7.5 7.5 0 0 0 1.7 1l.4 2.7h4l.4-2.7a7.5 7.5 0 0 0 1.7-1l2.5 1 2-3.5zM13 15.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z" transform="translate(-1 0)"/></svg>
+      </button>
+      <button class="avatar" id="avatar" aria-label="Profil"></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <button class="card tier-0" id="card" aria-label="Girokonto öffnen">
+      <div class="card-bglogo" id="cardBgLogo"></div>
+      <div class="card-shine"></div>
+      <div class="card-head">
+        <span class="card-brand">buckme</span>
+        <span class="card-tier" id="tierName">Lila</span>
+      </div>
+      <div class="card-balance" id="balance">0 €</div>
+      <div class="card-pill">
+        <svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 10h18" stroke="currentColor" stroke-width="2"/></svg>
+        <span>Girokonto</span>
+        <span class="card-limit" id="cardLimit">Limit 5.000 €</span>
+      </div>
+    </button>
+
+    <section class="goal">
+      <div class="goal-stage" id="goalStage">Ziel 1 / 5</div>
+      <div class="scene" id="scene" aria-label="BuckMe Maskottchen"></div>
+      <div class="bubble" id="bubble"></div>
+      <div class="goal-amount" id="savings">0 €</div>
+      <div class="progress"><div class="bar" id="bar"></div></div>
+      <div class="goal-left" id="goalLeft"></div>
+      <button class="pill-btn" id="savingsBtn">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M4 11c0-3 3-5 7-5h2c3 0 5 1.5 6 3h2v4h-2c-.5 1-1.3 1.8-2.3 2.4V18h-3v-1.5h-3V18H7.7v-2.4C5.5 14.5 4 13 4 11z"/><circle cx="15" cy="10" r="1" fill="currentColor"/></svg>
+        Sparkonto
+      </button>
+    </section>
+
+    <button class="row-btn" id="perksBtn">
+      <span class="row-ico"></span>
+      <span>Vorteile</span>
+      <span class="chev">›</span>
+    </button>
+    <div class="foot">BuckMe – Banking mit Humor. Spielgeld, keine echte Bank.</div>
+  </main>
+
+  <div id="backdrop"></div>
+  <div class="sheet" id="sheet">
+    <div class="grab" id="grab"><span></span></div>
+    <div id="sheetContent"></div>
+  </div>
+
+  <div id="onboard"></div>
+  <div id="levelup"></div>
+  <div id="toast"></div>
+</div>
+<script src="mascot.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
